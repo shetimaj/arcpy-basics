@@ -1,0 +1,24 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>Crime Analysis 2</Name><AddInID>{11a4e310-1ba7-470a-9398-4be9bd3544be}</AddInID><Description>Crime Analysis Add with customized and existing functions</Description><Version>0.1</Version><Image /><Author>Shetima Tekune</Author><Company>Ryerson University</Company><Date>02/21/2015</Date><Targets><Target name="Desktop" version="10.2" /></Targets><AddIn language="PYTHON" library="crime2_addin.py" namespace="crime2_addin"><ArcMap>
+    <Commands>
+        <ComboBox caption="Enter the Precinct ID" category="Crime Analysis 2" class="PrecinctID" id="crime2_addin.precinctId" itemSizeString="WWWWWW" message="Precinct Dropdown" rows="4" sizeString="WWWWWW" tip="Precinct Dropdown"><Help heading="Precinct Dropdown">Precinct Dropdown</Help></ComboBox>
+        <Tool caption="Select by Point" category="Crime Analysis 2" class="Select_Point" id="crime2_addin.selPoint" image="Images\Cursor-256.png" message="Select by single click" tip="Select by single click"><Help heading="">Select by single click</Help></Tool>
+        <Tool caption="Select by Rect" category="Crime Analysis 2" class="Select_Rect" id="crime2_addin.selRect" image="Images\select-rectangle24.png" message="Select by drawing a rectangle" tip="Select by drawing a rectangle"><Help heading="">Select by drawing a rectangle</Help></Tool>
+        <ToolPalette canTearOff="false" category="Crime Analysis 2" columns="2" id="crime2_addin.selTools" isMenuStyle="false"><Items><Tool refID="crime2_addin.selPoint" /><Tool refID="crime2_addin.selRect" /></Items></ToolPalette>
+        <Button caption="Buffer 500m" category="Crime Analysis 2" class="Buffer_500" id="crime2_addin.buf500" image="Images\b500.png" message="Buffer 500 metres" tip="Buffer 500 metres"><Help heading="">Buffer 500 metres</Help></Button>
+        <Button caption="Buffer 1000m" category="Crime Analysis 2" class="Buffer_1000" id="crime2_addin.buf1000" image="Images\b1000.png" message="Buffer 1000 metres" tip="Buffer 1000 metres"><Help heading="">Buffer 1000 metres</Help></Button>
+        <Button caption="Buffer 1500m" category="Crime Analysis 2" class="Buffer_1500" id="crime2_addin.buf1500" image="Images\b1500.png" message="Buffer 1500 metres" tip="Buffer 1500 metres"><Help heading="">Buffer 1500 metres</Help></Button>
+        <ToolPalette canTearOff="false" category="Crime Analysis 2" columns="2" id="crime2_addin.bufTools" isMenuStyle="false"><Items><Button refID="crime2_addin.buf500" /><Button refID="crime2_addin.buf1000" /><Button refID="crime2_addin.buf1500" /></Items></ToolPalette>
+        <Button caption="Count Crimes" category="Crime Analysis 2" class="Count_Crimes" id="crime2_addin.cntCrimes" image="" message="Count the number of crimes" tip="Count the number of crimes"><Help heading="">Count the number of crimes</Help></Button>
+        <Button caption="Overlay Grid" category="Crime Analysis 2" class="Overlay_Grid" id="crime2_addin.overlayGrid" image="Images\123163_42138_16_3x3_grid_icon.png" message="Overlay 1km grid" tip="Overlay 1km grid"><Help heading="">Overlay 1km grid</Help></Button>
+        <ComboBox caption="Assault Type" category="Crime Analysis 2" class="Assault_Type" id="crime2_addin.asType" itemSizeString="WWWWWW" message="Type of Assault" rows="4" sizeString="WWWWWW" tip="Type of Assault"><Help heading="Type of Assault">Type of Assault</Help></ComboBox>
+        <ComboBox caption="Time of Day" category="Crime Analysis 2" class="Time_Day" id="crime2_addin.timeDay" itemSizeString="WWWWWW" message="Period of day" rows="4" sizeString="WWWWWW" tip="Period of day"><Help heading="Period of day">Period of day</Help></ComboBox>
+        <ToolPalette canTearOff="false" category="Crime Analysis 2" columns="2" id="crime2_addin.existTools" isMenuStyle="false"><Items><Tool refID="esriLocationUI.MxAddressInspectorTool" /><Tool refID="esriArcMapUI.MxAddDataMenu" /><Tool refID="esriArcMapUI.GpsToolsMenu" /><Tool refID="esriArcMapUI.GpsOpenConnectionCommand" /><Tool refID="esriArcMapUI.GpsCloseConnectionCommand" /><Tool refID="esriArcMapUI.GpsStartStreamingCommand" /><Tool refID="esriArcMapUI.GpsStopStreamingCommand" /></Items></ToolPalette>
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="Crime Analysis" category="Crime Analysis 2" id="crime2_addin.crimAnal" showInitially="true"><Items><ComboBox refID="crime2_addin.precinctId" /><ToolPalette refID="crime2_addin.selTools" /><ToolPalette refID="crime2_addin.bufTools" /><Button refID="crime2_addin.cntCrimes" /><Button refID="crime2_addin.overlayGrid" /><ComboBox refID="crime2_addin.asType" /><ComboBox refID="crime2_addin.timeDay" /><ToolPalette refID="crime2_addin.existTools" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>
